@@ -18,7 +18,6 @@ public class Student extends Person {
         super(name, birthDate);
         this.rollNumber = rollNumber;
         this.registrationNumber = registrationNumber;
-        this.courses = new ArrayList<>();
     }
 
     public void enrollCourse(Course course) {

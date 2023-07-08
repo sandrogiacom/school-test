@@ -6,7 +6,7 @@ import com.giacom.school.domain.Teacher;
 
 import java.util.Date;
 
-public class Main {
+public class SchoolSystem {
     public static void main(String[] args) {
         // Create students
         Student student1 = new Student("John Doe", new Date(), 1, "S12345");

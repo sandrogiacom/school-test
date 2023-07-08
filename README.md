@@ -2,6 +2,42 @@
 
 The School System is a Java application that models a basic school system. It provides a set of classes to represent students, teachers, and courses, allowing for enrollment of students in courses and association of teachers with their respective courses.
 
+## Class Diagram
+
+```mermaid
+classDiagram
+    class Person {
+        +String name
+        +Date birthDate
+        +List<Contact> contact
+    }
+    class Contact {
+        +String email
+        +String phoneNumber
+    }
+    class Student {
+        +int rollNumber
+        +String registrationNumber
+        +List<Course> courses
+    }
+    class Teacher {
+        +String specialization
+        +String employeeId
+        +List<Course> courses
+    }
+    class Course {
+        +String name
+        +Teacher teacher
+        +List<Student> students
+    }
+
+    Person <|-- Student
+    Person <|-- Teacher
+    Person "1"--o"0..*" Contact
+    Student "1"--o"1..*" Course
+    Teacher "1"--o"1..*" Course
+```
+
 ## Features
 
 - Create and manage students, teachers, and courses
@@ -12,7 +48,7 @@ The School System is a Java application that models a basic school system. It pr
 
 ## Prerequisites
 
-- Java Development Kit (JDK) 8 or higher
+- Java Development Kit (JDK) 20 or higher
 - IDE (Integrated Development Environment) of your choice (e.g., Eclipse, IntelliJ IDEA)
 
 ## Getting Started

@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,8 +19,5 @@ public class Teacher extends Person {
         super(name, birthDate);
         this.specialization = specialization;
         this.employeeId = employeeId;
-        this.courses = new ArrayList<>();
     }
-
-
 }

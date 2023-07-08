@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -12,4 +14,11 @@ import java.util.Date;
 public class Person {
     private String name;
     private Date birthDate;
+    private List<Contact> contact;
+
+    public Person(String name, Date birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.contact = new ArrayList<>();
+    }
 }
