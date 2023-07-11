@@ -10,17 +10,15 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class Aluno extends Pessoa {
-    private int rollNumber;
-    private String registrationNumber;
-    private List<Curso> cours = new ArrayList<>();
+    private String numeroMatricula;
+    private List<Curso> cursos = new ArrayList<>();
 
-    public Aluno(String name, LocalDate dataNascimento, int rollNumber, String registrationNumber) {
+    public Aluno(String name, LocalDate dataNascimento, String numeroMatricula) {
         super(name, dataNascimento);
-        this.rollNumber = rollNumber;
-        this.registrationNumber = registrationNumber;
+        this.numeroMatricula = numeroMatricula;
     }
 
     public void matricularCurso(Curso curso) {
-        cours.add(curso);
+        cursos.add(curso);
     }
 }

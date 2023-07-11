@@ -1,8 +1,8 @@
 package com.giacom;
 
+import com.giacom.escola.domain.Aluno;
 import com.giacom.escola.domain.Contato;
 import com.giacom.escola.domain.Curso;
-import com.giacom.escola.domain.Aluno;
 import com.giacom.escola.domain.Professor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +19,7 @@ class SchoolSystemTest {
     @BeforeEach
     public void setup() {
         // Create a student
-        aluno = new Aluno("John Doe", LocalDate.of(2009, 12, 25), 1, "S12345");
+        aluno = new Aluno("John Doe", LocalDate.of(2009, 12, 25), "S12345");
         Contato contato = new Contato("aaa@aaa.com", "11123323");
         aluno.setContato(List.of(contato));
 
@@ -38,7 +38,7 @@ class SchoolSystemTest {
 
         // Verify that student is enrolled in the course
         Assertions.assertTrue(curso.getAlunos().contains(aluno));
-        Assertions.assertTrue(aluno.getCours().contains(curso));
+        Assertions.assertTrue(aluno.getCursos().contains(curso));
     }
 
 
