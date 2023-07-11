@@ -1,4 +1,4 @@
-package com.giacom.school.domain;
+package com.giacom.escola.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Contact {
+public class Contato {
     private String email;
-    private String phoneNumber;
+    private String numeroTelefone;
 }

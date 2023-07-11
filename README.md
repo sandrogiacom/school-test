@@ -6,12 +6,12 @@ The School System is a Java application that models a basic school system. It pr
 
 ```mermaid
 classDiagram
-    class Person {
-        +String name
-        +Date birthDate
-        +List<Contact> contact
+    class Pessoa {
+        +String nome
+        +Date dataNascimento
+        +List<Contato> contato
     }
-    class Contact {
+    class Contato {
         +String email
         +String phoneNumber
     }
@@ -27,7 +27,7 @@ classDiagram
     }
     class Course {
         +String name
-        +Teacher teacher
+        +Teacher professor
         +List<Student> students
     }
 
@@ -71,15 +71,15 @@ git clone https://github.com/your-username/school-system.git
 
 2. Create teachers using the `Teacher` class by providing their name, birth date, specialization, and employee ID.
 
-3. Create courses using the `Course` class by providing the course name and the respective teacher.
+3. Create courses using the `Course` class by providing the curso name and the respective professor.
 
 4. Enroll students in courses using the `enrollStudent()` method of the `Course` class.
 
 5. Assign teachers to courses using the `addCourse()` method of the `Teacher` class.
 
-6. Retrieve a student's courses using the `getCourses()` method of the `Student` class.
+6. Retrieve a aluno's courses using the `getCourses()` method of the `Student` class.
 
-7. Retrieve a teacher's courses using the `getCourses()` method of the `Teacher` class.
+7. Retrieve a professor's courses using the `getCourses()` method of the `Teacher` class.
 
 ## Examples
 
@@ -101,10 +101,10 @@ mathCourse.enrollStudent(student1);
 englishCourse.enrollStudent(student1);
 englishCourse.enrollStudent(student2);
 
-// Print student's courses
+// Print aluno's courses
 System.out.println(student1.getName() + "'s courses:");
-for (Course course : student1.getCourses()) {
- System.out.println(course.getName() + " (Taught by: " + course.getTeacher().getName() + ")");
+for (Course curso : student1.getCourses()) {
+ System.out.println(curso.getName() + " (Taught by: " + curso.getTeacher().getName() + ")");
 }
 ```
 
